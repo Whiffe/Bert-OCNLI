@@ -75,9 +75,9 @@ if __name__ == '__main__':
     })
 
     train_dataset = read_ocnli(configs.data_dir, configs.train_name)
-    # Chinese-SNLI 550k按照5%的概率取样到训练集集中。共27.5+50=77.5k的数据
+    # Chinese-SNLI 550k到训练集中，共550+50=600k的数据
     # train_dataset = read_ocnli_snli(configs.data_dir, configs.train_name, './SNLI/cnsd_snli_v1.0.train.jsonl')
-    # Chinese-SNLI 550k按照10%的概率取样到训练集集中。共55+50=105k的数据
+    # Chinese-SNLI 550k按照10%的概率（比例可调节）取样到训练集集中。共55+50=105k的数据
     # train_dataset = read_ocnli_snli2(configs.data_dir, configs.train_name, './SNLI/cnsd_snli_v1.0.train.jsonl')
     
     val_dataset = read_ocnli(configs.data_dir, configs.val_name)
